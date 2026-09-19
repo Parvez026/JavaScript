@@ -10,7 +10,6 @@
 // let str1=str[2]+str[1]+str[0]
 // console.log(str1);
 
-
 // let str2=str.split("").reverse().join("")
 // console.log(str2);
 
@@ -19,7 +18,7 @@
 //   let str="parvez"
 //   let lastChar=str.charAt(str.length-1)
 //   console.log(lastChar);
-  
+
 // Convert a full name into uppercase initials.
 
 // let name = "parvez alam";
@@ -31,10 +30,34 @@
 
 // console.log(initials);
 
-
 // Check whether two strings are equal ignoring case sensitivity.
 
 // let str1="abc"
 // let str2="Abc"
 
 // console.log(str1.toLowerCase()===str2.toLowerCase());
+
+// Create a simple login validation system.
+
+// Simulate a traffic light system using switch.
+
+// let signal = "green";
+
+// switch (signal) {
+//   case "red":
+//     console.log("stop");
+//     break;
+//   case "green":
+//     console.log("Go");
+//     break;
+//   case "yellow":
+//     console.log("Ready to go");
+//     break;
+//   default:
+//     console.log("Enter valid singnal");
+
+//     break;
+// }
+
+// Build a small marksheet generator using variables and conditionals.
+
