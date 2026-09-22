@@ -250,3 +250,54 @@ function reverseString(name) {
 // }
 // let result = memorizeFactorial();
 // console.log(result(5));
+
+//======= Create debounce function logic.======
+
+// function debounce(fn, delay) {
+//   let timer;
+
+//   return function (...args) {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       fn(...args);
+//     }, delay);
+//   };
+// }
+// function getData(value) {
+//   console.log(value);
+// }
+
+// const debounceFunc = debounce(getData, 2000);
+
+// const input = document.getElementById("search");
+
+// input.addEventListener("input", (event) => {
+//   debounceFunc(event.target.value);
+// });
+
+// =======Create throttle function logic.=====
+
+function throttle(fn, delay) {
+  let lastTime = 0;
+  return function (...args) {
+    let currentTime = Date.now();
+
+    if (currentTime - lastTime >= delay) {
+      fn(...args);
+      lastTime = currentTime;
+    }
+  };
+}
+function getData(value) {
+  console.log(value);
+}
+
+
+const throttelFunc=throttle(getData,4000)
+
+
+const input = document.getElementById("search");
+
+input.addEventListener("input", (event) => {
+  throttelFunc(event.target.value);
+});
