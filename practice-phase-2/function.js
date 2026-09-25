@@ -277,27 +277,107 @@ function reverseString(name) {
 
 // =======Create throttle function logic.=====
 
-function throttle(fn, delay) {
-  let lastTime = 0;
-  return function (...args) {
-    let currentTime = Date.now();
+// function throttle(fn, delay) {
+//   let lastTime = 0;
+//   return function (...args) {
+//     let currentTime = Date.now();
 
-    if (currentTime - lastTime >= delay) {
-      fn(...args);
-      lastTime = currentTime;
-    }
-  };
+//     if (currentTime - lastTime >= delay) {
+//       fn(...args);
+//       lastTime = currentTime;
+//     }
+//   };
+// }
+// function getData(value) {
+//   console.log(value);
+// }
+
+// const throttelFunc=throttle(getData,4000)
+
+// const input = document.getElementById("search");
+
+// input.addEventListener("input", (event) => {
+//   throttelFunc(event.target.value);
+// });
+
+// Write a function that executes only once.
+
+// (() => {
+//   console.log("hello");
+// })();
+
+// function one() {
+//   let executed = false;
+//   return function () {
+//     if (!executed) {
+//       console.log("Hello");
+//     }
+//     executed = true;
+//   };
+// }
+// let result = one();
+// result();
+// result();
+// result();
+
+// function myMap(arr, callback) {
+//   let result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     result.push(callback(arr[i]))
+//   }
+//   return result
+// }
+// let num=[1,2,3,4,5]
+
+// const result=myMap(num,(num)=>{
+//  return num*2
+// })
+// console.log(result);
+
+// Create custom implementation of filter.
+
+// function myFilter(arr, callback) {
+//   let result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (callback(arr[i])) {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result;
+// }
+// let arr = [10, 20, 30, 40];
+
+// let result = myFilter(arr, (num) => {
+//   return num > 20;
+// });
+// console.log(result);
+
+// Create custom implementation of reduce.
+
+// function myReduce(arr, callback) {
+//   let acc = 0;
+//   // let result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     acc = callback(acc, arr[i]);
+//   }
+//   return acc
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// let result = myReduce(arr, (acc, num) => {
+//   return acc + num;
+// });
+
+// console.log(result);
+
+// Create custom forEach.
+
+function myFoEach(arr, callback) {
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i]);
+  }
 }
-function getData(value) {
-  console.log(value);
-}
-
-
-const throttelFunc=throttle(getData,4000)
-
-
-const input = document.getElementById("search");
-
-input.addEventListener("input", (event) => {
-  throttelFunc(event.target.value);
+let number = [1, 2, 3, 4, 5];
+myFoEach(number, (num) => {
+  console.log(num);
 });
