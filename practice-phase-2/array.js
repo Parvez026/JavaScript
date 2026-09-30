@@ -1,4 +1,4 @@
-let arr = ["apple", "mango", "banana", "watermalen"];
+// let arr = ["apple", "mango", "banana", "watermalen"];
 
 // console.log(arr[0],arr[arr.length-1]);
 
@@ -146,4 +146,85 @@ let total = studentMarks.reduce((acc, num) => {
 });
 
 let avg = total / studentMarks.length;
-console.log(avg);
+// console.log(avg);
+
+// Count occurrences of numbers in array.
+
+// let elem = ["apple", 1, 2, "orange", 4, 5];
+
+// let numInElem = elem.reduce((acc, num) => {
+//   if (typeof num === "number") {
+//     acc++;
+//   }
+//   return acc;
+// }, 0);
+// console.log(numInElem);
+
+// Flatten nested arrays using flat.
+
+// let arr=[1,2,3,4,[5,6,7,8,[9,10,[11,12]]]]
+
+// console.log(arr.flat(Infinity));
+
+// Remove duplicates using Set.
+
+// let arr=[1,2,3,4,5,1,2]
+
+// let newarr=[...new Set(arr)]
+
+// console.log(newarr);
+
+// Sort array of objects by age.
+
+// let data = [
+//   {
+//     age: 10,
+//   },
+//   {
+//     age: 20,
+//   },
+//   {
+//     age: 15,
+//   },
+//   {
+//     age: 13,
+//   },
+// ];
+
+// data.sort((a,b)=>a.age-b.age)
+// console.log(data);
+
+// Find total price of shopping cart.
+
+// let cart = [
+//   { name: "Shoes", price: 1000 },
+//   { name: "T-Shirt", price: 500 },
+//   { name: "Jeans", price: 1200 }
+// ];
+
+// let totalPrice=cart.reduce((acc,price)=>{
+//   return acc+price.price
+// },0)
+
+// console.log(totalPrice);
+
+
+// Group users by age.
+
+let users = [
+  { name: "Parvez", age: 22 },
+  { name: "Aman", age: 21 },
+  { name: "Rahul", age: 25 },
+  { name: "Shahil", age: 21 },
+  { name: "Om", age: 22 }
+];
+
+let groupByAge=users.reduce((acc,user)=>{
+  if(!acc[user.age]){
+    acc[user.age]=[]
+  }
+  acc[user.age].push(user)
+  return acc
+},{})
+
+console.log(groupByAge);
