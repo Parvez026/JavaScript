@@ -113,25 +113,39 @@ let obj = { name: "aman", age: 23, city: "shahdol" };
 // console.log(wordFrequency(text));
 // // { the: 3, quick: 2, brown: 1, fox: 2, jumps: 1, over: 1, lazy: 1, dog: 1, is: 1 }
 
-let library = {
-  books: [],
+// let library = {
+//   books: [],
 
-  addBook(title, author) {
-    this.books.push({
-      id: this.books.length + 1,
-      title,
-      author,
-      borrowed: false,
-    });
-  },
+//   addBook(title, author) {
+//     this.books.push({
+//       id: this.books.length + 1,
+//       title,
+//       author,
+//       borrowed: false,
+//     });
+//   },
 
-  borrowBook(id) {
-    let book = this.books.find((b) => b.id === id);
-    if (!book) return "Book not found";
-    if (book.borrowed) return "Already Borrow";
-    book.borrowed = true;
-    return `You borrowed "${book.title}"`;
-  },
+//   borrowBook(id) {
+//     let book = this.books.find((b) => b.id == id);
+//     if (!book) return "Book not found";
+//     if (book.borrowed) return "Already Borrow";
+//     book.borrowed = true;
+//     return `You borrowed "${book.title}"`;
+//   },
 
-  
-};
+//   returnBook(id) {
+//     let book = this.books.find((b) => b.id == id);
+//     if (!book) return "Book not found";
+//     book.borrowed = false;
+//     return `You Returned "${book.title}"`;
+//   },
+
+//   availableBooks() {
+//     return this.books.filter((b) => !b.borrowed);
+//   },
+// };
+
+// library.addBook("Atomic Habits", "James Clear");
+// library.addBook("Deep Work", "Cal Newport");
+// console.log(library.borrowBook(1));
+// console.log(library.availableBooks());
