@@ -8,6 +8,7 @@
 // };
 // console.log(student.greet());
 
+
 const student = {
   name: "rahul",
   age: 23,
@@ -45,27 +46,22 @@ const student = {
 // console.log(student.name);
 
 const users = [
-  {
-    id: 1,
-    name: "Parvez",
-    age: 22,
-  },
-  {
-    id: 2,
-    name: "Parvez",
-    age: 23,
-  },
-  {
-    id: 3,
-    name: "Parvez",
-    age: 24,
-  },
-  {
-    id: 4,
-    name: "Parvez",
-    age: 24,
-  },
+  { name: "Aman", age: 22 },
+  { name: "Rahul", age: 25 },
+  { name: "Ravi", age: 20 },
+  { name: "Neha", age: 28 }
 ];
 
-console.log(users.filter((age)=>age.age>22));
 
+
+function findOldestUser(users){
+  let oldest=users[0]
+
+  for(let user of users){
+    if(user.age>oldest.age){
+      oldest=user
+    }
+  }
+  return oldest;
+}
+console.log(findOldestUser(users));
